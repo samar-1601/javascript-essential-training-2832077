@@ -19,7 +19,7 @@ const Photo = ({
   direction,
   top,
   left,
-  key,
+  key
 }) => {
   const imgStyle = { margin: margin, display: "block" };
   if (direction === "column") {
@@ -34,6 +34,7 @@ const Photo = ({
 
   return (
     <img
+      alt=""
       key={key}
       style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
       {...photo}
@@ -50,7 +51,7 @@ export const photoPropType = PropTypes.shape({
   alt: PropTypes.string,
   title: PropTypes.string,
   srcSet: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  sizes: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  sizes: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 });
 
 Photo.propTypes = {
@@ -72,7 +73,7 @@ Photo.propTypes = {
       );
     }
   },
-  direction: PropTypes.string,
+  direction: PropTypes.string
 };
 
 export default Photo;
