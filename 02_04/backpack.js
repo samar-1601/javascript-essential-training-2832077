@@ -1,3 +1,5 @@
+import { markup } from "./markup.js";
+
 const updateBackpack = (update) => {
   let main = document.querySelector("main");
   main.innerHTML = markup(backpack);
