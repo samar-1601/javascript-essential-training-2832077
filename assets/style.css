@@ -128,6 +128,7 @@ figure {
   cursor: pointer;
   background-color: white;
 }
+
 .lid-toggle:hover,
 .lid-toggle:focus {
   background-color: hsl(0, 0%, 95%);

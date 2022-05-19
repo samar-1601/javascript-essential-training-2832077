@@ -13,6 +13,21 @@
  *  - Returns <figure> element to where function is called
  */
 
+const main = (objVal) => {
+  const article = document.createElement("article");
+  article.innerHTML = content;
+  article.prepend(helperImage(objVal))
+  return article;
+};
+
+const helperImage = (element) => {
+  const figure = document.createElement("figure");
+  const imageMarkup = document.createElement("img");
+  imageMarkup.setAttribute("src", element.image);
+  figure.append(imageMarkup);
+  return figure;
+};
+
 const frogpack = {
   name: "Frog Backpack",
   volume: 8,
@@ -57,3 +72,6 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+
+document.querySelector("main").append(main(frogpack));
